@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Simple App To Track Your Expenses." />
+    <meta property="og:title" content="Expenses Tracker" />
+    <meta property="og:image" content="/imgs/wallet.jpj " />
+    <meta property="og:type" content="website" />
+    <title>Expenses Tracker</title>
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="/imgs/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="clear-pop">
+        <h3>Are You Sure!</h3>
+        <i class="fa-solid fa-triangle-exclamation "></i>
+        <p>This action cannot be undone.</p>
+        <div class="btns">
+          <button class="confirm">Confirm</button>
+          <button class="cancel">Cancel</button>
+        </div>
+      </div>
+      <div class="app">
+        <!-- Header> -->
+        <header class="header">
+          <h1>My Expenses</h1>
+          <p>Track Your Spending Easly</p>
+        </header>
+        <div class="total container">
+          <div class="totola-expenses">
+            <span>total expense</span>
+            <h2>SDG 0.00</h2>
+          </div>
+          <i class="fa-solid fa-wallet fa-lg wallet"></i>
+        </div>
+        <div class="wrapper">
+          <!-- Inputs  -->
+          <div class="inputs-fields">
+            <label for="name">
+              Expense Name
+              <i class="fa-solid fa-pen-to-square"></i>
+            </label>
+            <input
+              type="text"
+              name="expense-name"
+              id="name"
+              required
+              minlength="1"
+              placeholder="e.g seewts"
+            />
+            <span class="error" id="name-error">Name required</span>
+            <label for="amount">
+              Amount
+              <i class="fa-solid fa-money-bill-1-wave"></i>
+            </label>
+            <input
+              type="text"
+              name="expense-amount"
+              id="amount"
+              inputmode="numeric"
+              required
+              minlength="1"
+              placeholder="e.g 10.5"
+            />
+            <span class="error" id="amount-error">Enter a valid amount</span>
+            <label for="category">
+              Category
+              <i class="fa-solid fa-tag"></i>
+            </label>
+            <input
+              type="text"
+              name="category"
+              id="category"
+              required
+              minlength="1"
+              placeholder="Food"
+            />
+            <span class="error" id="categ-error">Category required</span>
+            <button type="submit" class="add-btn">
+              <i class="fa-solid fa-plus"></i>
+              Add Expense
+            </button>
+          </div>
+          <!-- Recent -->
+          <div class="recent container">
+            <div class="recent-head">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <h3>Recent Expenses</h3>
+              <span class="nums-items">0 items</span>
+            </div>
+            <div class="items"></div>
+            <p class="no-items">no expenses yet!</p>
+          </div>
+        </div>
+        <button class="clear-btn">
+          <i class="fa-solid fa-trash"></i>
+          Clear All
+        </button>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
